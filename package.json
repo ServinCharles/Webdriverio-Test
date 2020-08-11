@@ -1,0 +1,41 @@
+{
+  "name": "webdriverio-test",
+  "version": "1.0.0",
+  "description": "\"A WebdriverIO & Cucumber Boilerplate based on Page Object Model\"",
+  "scripts": {
+    "test": "npx wdio wdio.conf.js",
+    "lint": "eslint ."
+  },
+  "keywords": [
+    "cucumber",
+    "webdriverio",
+    "wdio"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ServinCharles/Webdriverio-Test.git"
+  },
+  "author": "Servin Charles",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ServinCharles/Webdriverio-Test/issues"
+  },
+  "homepage": "https://github.com/ServinCharles/Webdriverio-Test#readme",
+  "devDependencies": {
+    "@wdio/allure-reporter": "^5.22.4",
+    "@wdio/cli": "^6.4.0",
+    "@wdio/cucumber-framework": "^6.4.0",
+    "@wdio/local-runner": "^6.4.0",
+    "@wdio/mocha-framework": "^6.4.0",
+    "@wdio/selenium-standalone-service": "^5.0.0",
+    "@wdio/spec-reporter": "^6.4.0",
+    "@wdio/sync": "^6.4.0",
+    "wdio-cucumberjs-json-reporter": "^2.0.2"
+  },
+  "dependencies": {
+    "lint": "^0.7.0",
+    "chai": "^4.2.0",
+    "cucumber": "^6.0.5",
+    "multiple-cucumber-html-reporter": "^1.16.2"
+  }
+}
