@@ -1,3 +1,5 @@
+const { generate } = require('multiple-cucumber-html-reporter');
+
 exports.config = {
     //
     // ====================
@@ -149,7 +151,7 @@ exports.config = {
 
         // OR like this if you want to set the folder and the language
         [ 'cucumberjs-json', {
-                jsonFolder: '.tmp/new/',
+                jsonFolder: '.reports/json/',
                 language: 'en',
             },
         ],
@@ -302,8 +304,13 @@ exports.config = {
      * @param {Array.<Object>} capabilities list of capabilities details
      * @param {<Object>} results object containing test results
      */
-    // onComplete: function(exitCode, config, capabilities, results) {
-    // },
+     onComplete: function(exitCode, config, capabilities, results) {
+        generate({
+            jsonDir: '.reports/json/',
+            reportPath: './reports/html',
+            openReportInBrowser: true
+        });
+    },
     /**
     * Gets executed when a refresh happens.
     * @param {String} oldSessionId session ID of the old session
