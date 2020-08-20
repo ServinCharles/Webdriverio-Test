@@ -7,7 +7,7 @@ jobs:
     steps:
       - checkout
       - restore_cache:
-          keys:
+          keys:a
             - v1-deps-{{ .Branch }}-{{ checksum "package.json" }}
             - v1-deps-{{ .Branch }}
             - v1-deps
